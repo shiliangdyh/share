@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ShareLib</string>
+    <string-array name="platform">
+        <item>Wechat</item>
+        <item>WechatMoments</item>
+        <item>QQ</item>
+    </string-array>
+</resources>
