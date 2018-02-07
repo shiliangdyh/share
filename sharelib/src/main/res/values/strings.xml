@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">ShareLib</string>
-    <string-array name="platform">
+    <string name="share_wx_not_installed">没有安装微信客户端</string>
+    <string name="share_wb_not_installed">没有安装微博客户端</string>
+    <string name="share_qq_not_installed">没有安装QQ或版本过低</string>
+    <string-array name="share_platform">
         <item>Wechat</item>
         <item>WechatMoments</item>
         <item>QQ</item>
+        <item>QZONE</item>
+        <item>WEIBO</item>
     </string-array>
 </resources>

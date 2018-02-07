@@ -3,6 +3,7 @@ package com.mirstone.sharelib;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.mirstone.sharelib.listener.CallBack;
 import com.mirstone.sharelib.listener.ShareResult;
@@ -24,7 +25,7 @@ public class BaseWXEntryActivity extends Activity implements IWXAPIEventHandler 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        wxapi = WXAPIFactory.createWXAPI(this, "wx9bcc43603d5aba17", false);
+        wxapi = WXAPIFactory.createWXAPI(this, "wxda926b4f6d2fbe40", false);
         wxapi.handleIntent(getIntent(), this);
     }
 
@@ -42,15 +43,16 @@ public class BaseWXEntryActivity extends Activity implements IWXAPIEventHandler 
 
     @Override
     public void onResp(BaseResp baseResp) {
+        Log.d("ssssssss", "sssssssssffffffffffffffffff");
         int type = baseResp.getType();
-        ShareSdk shareSdk = ShareSdk.getInstance();
-        CallBack<ShareResult> callBack = shareSdk.getCallBack();
+        ShareManager shareManager = ShareManager.getInstance();
+        CallBack<ShareResult> callBack = shareManager.getCallBack();
         if (type == 2){
             switch (baseResp.errCode) {
                 case BaseResp.ErrCode.ERR_OK:
                     if (callBack != null) {
                         ShareResult shareResult = new ShareResult();
-                        String platform = shareSdk.getPlatform(BaseWXEntryActivity.this);
+                        String platform = shareManager.getPlatform(BaseWXEntryActivity.this);
                         shareResult.setPlatform(platform);
                         callBack.success(shareResult);
                     }
@@ -70,7 +72,13 @@ public class BaseWXEntryActivity extends Activity implements IWXAPIEventHandler 
                     break;
             }
         }
-        ShareSdk.destroy();
+        ShareManager.destroy();
         finish();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0,0);
     }
 }

@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mirstone.wxapi.WXEntryActivity"
+            android:name="com.hf.wxapi.WXEntryActivity"
             android:exported="true"
             android:label="@string/app_name" />
     </application>

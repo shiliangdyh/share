@@ -2,27 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.mirstone.sharedemo.MainActivity">
 
     <Button
-        android:id="@+id/text"
+        android:id="@+id/wx_text"
         android:onClick="onClick"
-        android:text="纯文本"
+        android:text="微信纯文本"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
-        android:id="@+id/image"
+        android:id="@+id/wx_image"
         android:onClick="onClick"
-        android:text="图片"
+        android:text="微信图片"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/text_image"
+        android:id="@+id/wx_text_image"
         android:onClick="onClick"
-        android:text="图文链接"
+        android:text="微信图文链接"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/weibo"
+        android:onClick="onClick"
+        android:text="微博"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/qq_image"
+        android:onClick="onClick"
+        android:text="qq_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/qq_text_image"
+        android:onClick="onClick"
+        android:text="qq_text_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/qzone"
+        android:onClick="onClick"
+        android:text="qzone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.mirstone.wxapi;
+package com.hf.wxapi;
 
 import com.mirstone.sharelib.BaseWXEntryActivity;
 

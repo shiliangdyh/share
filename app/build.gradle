@@ -3,16 +3,16 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'mirstone'
-            keyPassword '111111'
-            storeFile file('../release.jks')
-            storePassword '111111'
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file('D:/res/hfweather.keystore')
+            storePassword RELEASE_STORE_PASSWORD
             v2SigningEnabled true
         }
     }
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.mirstone"
+        applicationId "com.hf"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1

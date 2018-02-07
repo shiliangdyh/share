@@ -27,8 +27,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.4.0'
     implementation 'com.github.mirstone:commonutil:1.0.4'
+    compile 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar'
 }
 
 
@@ -38,6 +42,6 @@ publish {
     groupId = 'com.github.mirstone'//jcenter上的路径
     artifactId = 'sharelib'//项目名称
     publishVersion = versionName()//版本号
-    desc = 'Oh hi, this is android common util'//描述，不重要
-    website = 'https://github.com/mirstone/sharelib'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+    desc = 'Oh hi, this is android third share SDK'//描述，不重要
+    website = 'https://github.com/shiliangdyh/share'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
